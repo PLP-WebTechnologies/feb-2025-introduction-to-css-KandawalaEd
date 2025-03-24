@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Forms, Tables and Multimedia</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome!</h1>
+            <p>Hello there. Today I will attempt to demonstrate proficiency in working with:
+            <nav>  <!--A nav element for different sections of the page-->
+                <a href="#multimedia">Multimedia</a> 
+                <a href="#table">Table</a>
+                <a href="#form">Form</a>
+                <a href="#about">About</a>  
+            </nav>
+        </header>
+        <main>
+            <section id="multimedia">    <!--Multimedia section for navigation and accessibility-->
+                <h2>Working with Multimedia:</h2>  
+                <p>There are different multimedia elements in html, including pictures, videos and audio.</p>
+                <p>Here is a sample audio file from pixabay.com</p>
+                <audio controls src="./alone-296348.mp3" muted></audio> <!--I chose to use a file in the same folder and apply include the relative path-->
+                <div class="img-vid">
+                    <div class="image">
+                        <p>Here is an example of an image from pexels.com:</p>
+                        <figure>
+                            <img src="https://images.pexels.com/photos/159211/headache-pain-pills-medication-159211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image of different types of medicine" width="600" height="400">
+                            <figcaption>Image showing different types of modern medicine.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="video">
+                        <p>Here is a sample video of a chameleon also from pixabay.com</p>
+                        <video controls src="./265271_small.mp4" width="600" height="400"></video>
+                    </div>
+                </div>
+            </section>
+            <section id="table"> <!--Table section-->
+                <h2>Tables</h2>
+                <p>Here is a table of some notable humans:</p>
+                <table>
+                    <caption>Great Humans</caption>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Edmond Ombaso</td>
+                            <td>Kenya</td>
+                            <td>+254797981498</td>
+                            <td>ombasoedmond@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Peter Drury</td>
+                            <td>London, England</td>
+                            <td>+01456367</td>
+                            <td>drurspeter@yahoo.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Derrick Ray</td>
+                            <td>Brighton, England</td>
+                            <td>+018349848</td>
+                            <td>Deray@hotmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ruben Amorim</td>
+                            <td>Lisbon, Portugal</td>
+                            <td>+97833733</td>
+                            <td>amorimball@uefa.com</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Lionel Messi</td>
+                            <td>Buenos Aires, Argentina</td>
+                            <td>+05637882</td>
+                            <td>tikitaka@cruyf.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="form"> <!--Form section-->
+                <h2>Forms:</h2>
+                <p>This is a registration form to sign up to my site and enjoy good vibes.</p>
+                <fieldset>
+                    <legend>Register here.</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Edmond Ombaso" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ombasoedmond@gmail.com" required>
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" name="password" required><br><br> <!--I put two line breaks for appearance but i am not sure if it is best practice-->
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" min="1908-05-01" max="2020-01-01" required> <!--My site only accepts users younger than the oldest person alive and older than 5 years old-->
+                    <label for="visibility">How did you hear about us?</label>
+                    <select name="visibility" id="visibility">
+                        <option value="friends">Friends</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="accident">Accidentally</option>
+                        <option value="mass-media">TV or Radio</option>
+                        <option value="intrinsic" selected>I just knew</option> <!--Intrinsic is pre-selected because the page is just that good-->
+                    </select>
+                    <button type="submit">Submit</button>
+                </fieldset>
+                <p>This is a survey form.</p>
+                <fieldset>
+                    <legend>Give us your feedback:</legend>
+                    <label>What did you like about my page?</label>
+                    <label for="kudosmultimedia">Multimedia</label>
+                    <input type="checkbox" id="kudosmultimedia" name="multi-media" value="multimedia">
+                    <label for="kudostable">Table</label>
+                    <input type="checkbox" id="kudostable" name="table" value="table">
+                    <label for="kudosforms">Forms</label>
+                    <input type="checkbox" id="kudosforms" name="forms" value="forms"><br>
+                    <label>Will you visit again?</label>
+                    <label for="willreturn">Yes</label>
+                    <input type="radio" id="willreturn" name="return" value="yes" checked>
+                    <label for="notreturn">No</label>
+                    <input type="radio" id="notreturn" name="return" value="no">
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </section>
+            <section id="about">
+                <footer>
+                    <p>Made by KandawalaEd</p>
+                </footer>
+            </section>
+        </main>
+    </body>
+</html>
